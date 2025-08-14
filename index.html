@@ -3,130 +3,366 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Sociallgram — Made for Bharat, By Bharat. A new era of Indian social media.">
+  <meta name="description" content="Sociallgram — India's social media. Connect, share, and celebrate Bharat's voice.">
   <title>Sociallgram — Made for Bharat</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:700,400|Roboto:400,500&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
   <style>
     body {
       margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f9f9f9;
-      color: #333;
+      font-family: 'Montserrat', 'Roboto', Arial, sans-serif;
+      background: linear-gradient(135deg, #fff8f2 0%, #ffe3e0 100%);
+      color: #232323;
     }
     header {
-      background: linear-gradient(90deg, #ff5722, #e91e63);
-      color: white;
-      padding: 60px 20px;
+      background: linear-gradient(90deg, #ff6f00 0%, #e040fb 100%);
+      color: #fff;
+      padding: 70px 20px 40px 20px;
       text-align: center;
+      position: relative;
+      overflow: hidden;
     }
-    header h1 {
+    .logo {
       font-size: 3rem;
-      margin-bottom: 10px;
-    }
-    header p {
-      font-size: 1.2rem;
-      max-width: 600px;
-      margin: auto;
-    }
-    section {
-      padding: 60px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-    .features {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-    .feature-box {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-    }
-    .feature-box h3 {
-      margin-bottom: 10px;
-      color: #e91e63;
-    }
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 20px;
-    }
-    .cta {
-      background: linear-gradient(90deg, #e91e63, #ff5722);
-      color: white;
-      padding: 40px;
-      border-radius: 10px;
-      text-align: center;
-      margin-top: 40px;
-    }
-    .cta h2 {
-      margin-bottom: 15px;
-    }
-    a.button {
+      font-weight: 700;
+      letter-spacing: 2px;
+      margin-bottom: 14px;
       display: inline-block;
-      padding: 10px 20px;
-      background: white;
-      color: #e91e63;
-      text-decoration: none;
-      border-radius: 25px;
-      font-weight: bold;
+      background: linear-gradient(90deg, #fffde4 20%, #ffb199 100%);
+      background-clip: text;
+      -webkit-background-clip: text;
+      color: transparent;
+      -webkit-text-fill-color: transparent;
     }
-    a.button:hover {
-      background: #ffe6f0;
+    .tagline {
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      font-weight: 500;
+    }
+    .cta-btn {
+      display: inline-block;
+      padding: 16px 48px;
+      background: #fff;
+      color: #e040fb;
+      border-radius: 30px;
+      font-weight: 700;
+      font-size: 1.15rem;
+      border: none;
+      text-decoration: none;
+      transition: background 0.2s, color 0.2s, transform 0.18s;
+      margin-top: 20px;
+      box-shadow: 0 4px 24px #e040fb33;
+    }
+    .cta-btn:hover {
+      background: #ffd6f0;
+      color: #ff6f00;
+      transform: scale(1.06);
+    }
+    .hero-img {
+      width: 350px;
+      margin: 48px auto 0 auto;
+      display: block;
+      border-radius: 30px;
+      box-shadow: 0 10px 32px #d5000022;
+      border: 5px solid #fff;
+    }
+    nav {
+      position: absolute;
+      top: 30px;
+      right: 40px;
+      z-index: 2;
+    }
+    nav a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+      margin: 0 16px;
+      font-size: 1.1rem;
+      transition: color 0.2s;
+    }
+    nav a:hover { color: #ffe082; }
+
+    section {
+      max-width: 1100px;
+      margin: 70px auto;
+      padding: 0 20px;
+    }
+    h2 {
+      text-align: center;
+      color: #d50000;
+      margin-bottom: 40px;
+      font-size: 2.3rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .features, .whys, .how {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+    }
+    .feature-box, .why-box, .how-step {
+      background: #fff;
+      border-radius: 18px;
+      padding: 34px 24px;
+      box-shadow: 0 8px 28px #ff6f0022;
+      text-align: center;
+      transition: transform 0.14s;
+    }
+    .feature-box:hover, .why-box:hover, .how-step:hover {
+      transform: translateY(-7px) scale(1.03);
+      box-shadow: 0 18px 44px #e040fb15;
+    }
+    .feature-icon, .why-icon, .how-icon {
+      font-size: 2.2rem;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .feature-box h3, .why-box h3 {
+      margin-bottom: 13px;
+      color: #e040fb;
+      font-size: 1.22rem;
+    }
+    .about, .vision, .creators, .communities, .faq-section {
+      background: #fff;
+      border-radius: 18px;
+      padding: 38px 28px;
+      margin-bottom: 40px;
+      box-shadow: 0 8px 24px #e040fb15;
+    }
+    .about h2, .vision h2, .creators h2, .communities h2, .faq-section h2 {
+      color: #ff6f00;
+      margin-bottom: 18px;
+    }
+    .testimonials {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: center;
+    }
+    .testimonial {
+      background: #fffde7;
+      border-radius: 12px;
+      padding: 22px 18px;
+      max-width: 320px;
+      font-style: italic;
+      box-shadow: 0 2px 14px #ffecb3b5;
+    }
+    .testimonial span {
+      display: block;
+      margin-top: 8px;
+      color: #d50000;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+    .faq {
+      margin: 18px 0;
+    }
+    .faq strong {
+      color: #d50000;
+    }
+    .faq p {
+      margin-top: 4px;
+      margin-bottom: 14px;
+    }
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      margin-top: 30px;
+    }
+    .social-links a {
+      font-size: 2rem;
+      color: #e040fb;
+      transition: color 0.2s;
+      text-decoration: none;
+    }
+    .social-links a:hover { color: #ff6f00; }
+    footer {
+      background: #111;
+      color: #eee;
+      text-align: center;
+      padding: 38px 10px;
+      font-size: 1.1rem;
+      margin-top: 60px;
+      letter-spacing: 1px;
+    }
+    @media (max-width: 900px) {
+      .features, .whys, .how { grid-template-columns: 1fr; }
+      .hero-img { width: 95vw; }
+      nav { position: static; text-align: center; margin-bottom: 14px; }
     }
   </style>
 </head>
 <body>
-
   <header>
-    <h1>Sociallgram</h1>
-    <p>Made for Bharat, By Bharat. A new era of social media where our voices, culture, and ideas lead the way.</p>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#features">Features</a>
+      <a href="#why">Why?</a>
+      <a href="#how">How it Works</a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="logo">🇮🇳 Sociallgram</div>
+    <div class="tagline">Made for Bharat, by Bharat.<br>Connect. Share. Celebrate India’s voice.</div>
+    <a href="#" class="cta-btn">Coming Soon — Join Waitlist</a>
+    <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=700&q=80" alt="App preview" class="hero-img" />
   </header>
 
-  <section>
-    <h2>About Sociallgram</h2>
-    <p>Sociallgram is India’s very own social media platform, created to empower our people, celebrate our culture, and keep our data safe within the nation. It’s not just another app — it’s a movement towards digital independence.</p>
+  <section class="about" id="about">
+    <h2>What is Sociallgram?</h2>
+    <p>
+      Sociallgram is India's social media app, built to empower every voice in Bharat. Share your stories, connect with communities, and celebrate our culture in your language. Built with privacy and Indian values at its heart, it's a platform you can truly call your own.
+    </p>
   </section>
 
-  <section>
-    <h2>Features</h2>
+  <section id="features">
+    <h2>Key Features</h2>
     <div class="features">
       <div class="feature-box">
-        <h3>🇮🇳 Made in India</h3>
-        <p>Designed and developed for Bharat with pride, ensuring our stories stay ours.</p>
+        <div class="feature-icon">🇮🇳</div>
+        <h3>100% Made in India</h3>
+        <p>Created, hosted, and operated entirely in Bharat. Your data never leaves India.</p>
       </div>
       <div class="feature-box">
-        <h3>🔒 Privacy First</h3>
-        <p>Your data is stored securely within India, keeping you in control.</p>
+        <div class="feature-icon"><i class="fa-solid fa-shield-halved"></i></div>
+        <h3>Privacy & Security</h3>
+        <p>Bank-level security and a strict privacy-first policy. You’re always in control of your data.</p>
       </div>
       <div class="feature-box">
-        <h3>🌏 Connect Locally</h3>
-        <p>Find and engage with people who share your values, interests, and culture.</p>
+        <div class="feature-icon"><i class="fa-solid fa-language"></i></div>
+        <h3>Multi-Language Support</h3>
+        <p>Post, comment, and connect in all major Indian languages. Celebrate linguistic diversity!</p>
       </div>
       <div class="feature-box">
-        <h3>🎨 Creative Freedom</h3>
-        <p>Post, share, and express yourself without limitations, in your own language.</p>
+        <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+        <h3>Community Groups</h3>
+        <p>Join or create groups around interests, regions, or causes. Find your tribe!</p>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon"><i class="fa-solid fa-palette"></i></div>
+        <h3>Creative Freedom</h3>
+        <p>Share images, videos, and stories. Express yourself without limits.</p>
+      </div>
+      <div class="feature-box">
+        <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+        <h3>Fast & Modern</h3>
+        <p>Lightning-fast, lightweight, and beautiful design. Built for every Indian device.</p>
       </div>
     </div>
   </section>
 
-  <section>
-    <h2>Our Vision</h2>
-    <p>We believe in a future where Bharat stands digitally strong — where our voices are amplified, our data remains ours, and our people connect without dependency on foreign platforms. Sociallgram is more than an app, it’s the home of our digital community.</p>
+  <section id="why">
+    <h2>Why Sociallgram?</h2>
+    <div class="whys">
+      <div class="why-box">
+        <div class="why-icon"><i class="fa-solid fa-person-rays"></i></div>
+        <h3>For Bharat, By Bharat</h3>
+        <p>We know your needs — because we are you! Our mission is to empower every Indian voice.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-icon"><i class="fa-solid fa-lock"></i></div>
+        <h3>Your Data, Your Rules</h3>
+        <p>No selling your data to outsiders. Full transparency. You decide what to share.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-icon"><i class="fa-solid fa-hands-holding"></i></div>
+        <h3>Celebrate Culture</h3>
+        <p>Festivals, regional trends, and Indian heroes — all in one place, always trending.</p>
+      </div>
+      <div class="why-box">
+        <div class="why-icon"><i class="fa-solid fa-heart"></i></div>
+        <h3>Safe & Respectful</h3>
+        <p>Community guidelines and moderation to keep hate and fake news away.</p>
+      </div>
+    </div>
   </section>
 
-  <section class="cta">
-    <h2>Be Part of the Change</h2>
-    <p>Join the movement towards India’s own social media platform. Together, we can make history.</p>
-    <a href="#" class="button">Coming Soon</a>
+  <section id="how">
+    <h2>How It Works</h2>
+    <div class="how">
+      <div class="how-step">
+        <div class="how-icon"><i class="fa-solid fa-mobile-screen"></i></div>
+        <h3>1. Download the App</h3>
+        <p>Available soon on Android & iOS! Sign up for early access.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-icon"><i class="fa-solid fa-user-plus"></i></div>
+        <h3>2. Create Your Profile</h3>
+        <p>Personalize your account, choose your language, and set your interests.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-icon"><i class="fa-solid fa-comments"></i></div>
+        <h3>3. Connect & Share</h3>
+        <p>Make friends, join communities, and share your moments in your language.</p>
+      </div>
+      <div class="how-step">
+        <div class="how-icon"><i class="fa-solid fa-star"></i></div>
+        <h3>4. Grow & Shine</h3>
+        <p>Earn badges, get featured, and become a Sociallgram star!</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="creators">
+    <h2>For Creators</h2>
+    <p>Sociallgram is a launchpad for India's creators. Share your talent, reach new fans, and monetize your content. We support regional creators, artists, and influencers with special tools and promotion.</p>
+  </section>
+
+  <section class="communities">
+    <h2>For Communities</h2>
+    <p>Start or join groups around hobbies, localities, or causes. Organize events, discussions, or even digital festivals. Sociallgram makes it easy to find your people and make a difference together.</p>
+  </section>
+
+  <section>
+    <h2>What People Say</h2>
+    <div class="testimonials">
+      <div class="testimonial">
+        "Finally, a social media app that understands India! Can't wait for launch."
+        <span>— Radhika, Mumbai</span>
+      </div>
+      <div class="testimonial">
+        "Love the focus on languages and privacy. Proud to support Sociallgram."
+        <span>— Aarav, Chennai</span>
+      </div>
+      <div class="testimonial">
+        "Our own platform, by our people. This is the future."
+        <span>— Priya, Delhi</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="faq-section" id="faq">
+    <h2>Frequently Asked Questions</h2>
+    <div class="faq">
+      <strong>Q: Which languages does Sociallgram support?</strong>
+      <p>A: Hindi, Tamil, Telugu, Bengali, Marathi, Gujarati, Kannada, Malayalam, Punjabi — and more coming!</p>
+      <strong>Q: Will my data be secure?</strong>
+      <p>A: Yes! We use world-class security and store your data only in India. You decide what to share.</p>
+      <strong>Q: When is the app launching?</strong>
+      <p>A: Very soon! Join our waitlist to be the first to know.</p>
+      <strong>Q: Is it free?</strong>
+      <p>A: Yes, Sociallgram is free for all users.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact & Socials</h2>
+    <p style="text-align:center;">
+      Have questions, want to partner, or just say hi?<br>
+      Email us at 
+      <a href="mailto:gramsociall@gmail.com">gramsociall@gmail.com</a>
+    </p>
+    <div class="social-links">
+      <a href="#"><i class="fab fa-x-twitter"></i></a>
+      <a href="#"><i class="fab fa-instagram"></i></a>
+      <a href="#"><i class="fab fa-facebook"></i></a>
+      <a href="#"><i class="fab fa-youtube"></i></a>
+    </div>
   </section>
 
   <footer>
-    <p>© 2025 Sociallgram — Made for Bharat, By Bharat.</p>
+    © 2025 Sociallgram — India's Social Media | Made for Bharat 🇮🇳
   </footer>
-
 </body>
 </html>
