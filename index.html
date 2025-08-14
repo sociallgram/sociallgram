@@ -1,138 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sociallgram — Made for Bharat, By Bharat</title>
-<style>
-    * {margin: 0; padding: 0; box-sizing: border-box;}
-    body {font-family: Arial, sans-serif; background: #fdfdfd; color: #222; line-height: 1.6;}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Sociallgram — Made for Bharat, By Bharat. A new era of Indian social media.">
+  <title>Sociallgram — Made for Bharat</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f9f9f9;
+      color: #333;
+    }
     header {
-        background: linear-gradient(135deg, #ff006e, #fbb13c);
-        padding: 20px;
-        text-align: center;
-        color: white;
+      background: linear-gradient(90deg, #ff5722, #e91e63);
+      color: white;
+      padding: 60px 20px;
+      text-align: center;
     }
-    header img {width: 80px; margin-bottom: 10px;}
-    header h1 {font-size: 2.5em; margin-bottom: 10px;}
-    header p {font-size: 1.2em;}
-
-    section {padding: 60px 20px; max-width: 1000px; margin: auto;}
-
-    .about, .features, .preview, .cta {
-        margin-bottom: 60px;
+    header h1 {
+      font-size: 3rem;
+      margin-bottom: 10px;
     }
-    h2 {text-align: center; font-size: 2em; margin-bottom: 20px;}
-    p {text-align: center; max-width: 800px; margin: auto; margin-bottom: 20px;}
-
-    .features-grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 20px;
+    header p {
+      font-size: 1.2rem;
+      max-width: 600px;
+      margin: auto;
     }
-    .feature-card {
-        background: white;
-        padding: 20px;
-        border-radius: 12px;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-        transition: transform 0.3s;
+    section {
+      padding: 60px 20px;
+      max-width: 900px;
+      margin: auto;
     }
-    .feature-card:hover {
-        transform: translateY(-5px);
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
     }
-    .feature-card h3 {margin-bottom: 10px; color: #ff006e;}
-
-    .preview img {
-        width: 100%;
-        max-width: 500px;
-        display: block;
-        margin: auto;
-        border-radius: 12px;
-        box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+    .feature-box {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
     }
-
+    .feature-box h3 {
+      margin-bottom: 10px;
+      color: #e91e63;
+    }
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 20px;
+    }
     .cta {
-        text-align: center;
-        background: linear-gradient(135deg, #ff006e, #fbb13c);
-        color: white;
-        padding: 40px 20px;
-        border-radius: 12px;
+      background: linear-gradient(90deg, #e91e63, #ff5722);
+      color: white;
+      padding: 40px;
+      border-radius: 10px;
+      text-align: center;
+      margin-top: 40px;
     }
-    .cta a {
-        display: inline-block;
-        background: white;
-        color: #ff006e;
-        padding: 10px 20px;
-        margin-top: 15px;
-        border-radius: 30px;
-        font-weight: bold;
-        text-decoration: none;
+    .cta h2 {
+      margin-bottom: 15px;
     }
-
-    /* Scroll animations */
-    .hidden {opacity: 0; transform: translateY(30px); transition: all 0.6s ease-out;}
-    .show {opacity: 1; transform: translateY(0);}
-</style>
+    a.button {
+      display: inline-block;
+      padding: 10px 20px;
+      background: white;
+      color: #e91e63;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+    }
+    a.button:hover {
+      background: #ffe6f0;
+    }
+  </style>
 </head>
 <body>
 
-<header>
-    <img src="logo.png" alt="Sociallgram Logo">
+  <header>
     <h1>Sociallgram</h1>
-    <p>Made for Bharat, By Bharat — A new way to connect, share, and inspire.</p>
-</header>
+    <p>Made for Bharat, By Bharat. A new era of social media where our voices, culture, and ideas lead the way.</p>
+  </header>
 
-<section class="about hidden">
+  <section>
     <h2>About Sociallgram</h2>
-    <p>Sociallgram is Bharat’s own social media platform where connections feel real and voices matter. Built with love in India, for the people of India — it’s time to take control of our digital future.</p>
-</section>
+    <p>Sociallgram is India’s very own social media platform, created to empower our people, celebrate our culture, and keep our data safe within the nation. It’s not just another app — it’s a movement towards digital independence.</p>
+  </section>
 
-<section class="features hidden">
-    <h2>Why Join?</h2>
-    <div class="features-grid">
-        <div class="feature-card">
-            <h3>🇮🇳 Made in India</h3>
-            <p>Crafted for Bharat’s culture, values, and people.</p>
-        </div>
-        <div class="feature-card">
-            <h3>📸 Share Freely</h3>
-            <p>Post photos, stories, and updates without limits.</p>
-        </div>
-        <div class="feature-card">
-            <h3>🔒 Privacy First</h3>
-            <p>Your data stays safe and belongs only to you.</p>
-        </div>
-        <div class="feature-card">
-            <h3>🤝 Community</h3>
-            <p>Connect with people who share your passions.</p>
-        </div>
+  <section>
+    <h2>Features</h2>
+    <div class="features">
+      <div class="feature-box">
+        <h3>🇮🇳 Made in India</h3>
+        <p>Designed and developed for Bharat with pride, ensuring our stories stay ours.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🔒 Privacy First</h3>
+        <p>Your data is stored securely within India, keeping you in control.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🌏 Connect Locally</h3>
+        <p>Find and engage with people who share your values, interests, and culture.</p>
+      </div>
+      <div class="feature-box">
+        <h3>🎨 Creative Freedom</h3>
+        <p>Post, share, and express yourself without limitations, in your own language.</p>
+      </div>
     </div>
-</section>
+  </section>
 
-<section class="preview hidden">
+  <section>
     <h2>Our Vision</h2>
-    <p>Here’s a sneak peek at what Sociallgram will look like.</p>
-    <img src="mockup.png" alt="Sociallgram App Preview">
-</section>
+    <p>We believe in a future where Bharat stands digitally strong — where our voices are amplified, our data remains ours, and our people connect without dependency on foreign platforms. Sociallgram is more than an app, it’s the home of our digital community.</p>
+  </section>
 
-<section class="cta hidden">
+  <section class="cta">
     <h2>Be Part of the Change</h2>
-    <p>Sociallgram is coming soon. Join the movement and help shape the future of Indian social media.</p>
-    <a href="#">Sign Up for Updates</a>
-</section>
+    <p>Join the movement towards India’s own social media platform. Together, we can make history.</p>
+    <a href="#" class="button">Coming Soon</a>
+  </section>
 
-<script>
-    // Scroll animation
-    const hiddenElements = document.querySelectorAll('.hidden');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('show');
-            }
-        });
-    });
-    hiddenElements.forEach(el => observer.observe(el));
-</script>
+  <footer>
+    <p>© 2025 Sociallgram — Made for Bharat, By Bharat.</p>
+  </footer>
 
 </body>
 </html>
