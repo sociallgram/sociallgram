@@ -3,78 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SociallGram</title>
-  <meta name="description" content="SociallGram – India's very own social media platform. Share, connect, and inspire. Launching soon!">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
-  <link rel="stylesheet" href="style.css"/>
+  <title>Sociallgram — Made for Bharat, By Bharat</title>
+  <meta name="description" content="Sociallgram — Bharat’s own social media platform. Made for Bharat, By Bharat. Coming Soon.">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #fafafa;
+      color: #333;
+      text-align: center;
+    }
+    header {
+      background: linear-gradient(90deg, #ff4e50, #f9d423);
+      padding: 20px;
+    }
+    header img {
+      max-height: 60px;
+    }
+    .hero {
+      padding: 40px 20px;
+    }
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    .hero p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 0 auto 20px;
+    }
+    .mockup {
+      margin: 40px auto;
+      max-width: 800px;
+    }
+    .mockup img {
+      width: 100%;
+      border-radius: 15px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    }
+    .about {
+      background: #fff;
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: 0 auto;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    .about h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+    }
+    .about p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+    footer {
+      background: #222;
+      color: #fff;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
 <body>
-  <canvas id="bg"></canvas>
 
-  <div class="overlay">
-    <div class="card">
-      <h1>🚀 SociallGram</h1>
-      <p class="tagline">India’s very own social media platform is <strong>coming soon</strong>.</p>
-      <p class="highlight">Get ready to connect, share & inspire like never before ✨</p>
-      <a href="#" class="cta-btn">Join the Waitlist</a>
-    </div>
+  <!-- Header with Logo -->
+  <header>
+    <img src="logo.png" alt="Sociallgram Logo">
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <h1>Coming Soon: Sociallgram</h1>
+    <p>Made for Bharat, By Bharat — A new home for our voices, stories, and culture.</p>
+  </section>
+
+  <!-- Mockup Image -->
+  <div class="mockup">
+    <img src="mockup.png" alt="Sociallgram App Preview">
   </div>
 
-  <script>
-    // Floating particles background
-    const canvas = document.getElementById("bg");
-    const ctx = canvas.getContext("2d");
-    let particlesArray;
+  <!-- About Section -->
+  <section class="about">
+    <h2>What is Sociallgram?</h2>
+    <p>
+      Sociallgram is Bharat’s own social media platform — a place where we connect, share, and grow together.  
+      Our mission is to create a safe, vibrant, and inclusive digital space that celebrates our diversity and keeps our data at home.  
+    </p>
+    <p>
+      From sharing your everyday moments to discovering stories from across the nation, Sociallgram is designed to feel familiar yet proudly unique.  
+      Built with modern technology, our platform will give you the tools to express yourself, engage with your community, and explore content that matters to you.  
+    </p>
+    <p>
+      Join the movement. Be part of the future of Bharat’s digital space.
+    </p>
+  </section>
 
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+  <!-- Footer -->
+  <footer>
+    &copy; 2025 Sociallgram — Made for Bharat, By Bharat
+  </footer>
 
-    class Particle {
-      constructor(){
-        this.x = Math.random() * canvas.width;
-        this.y = Math.random() * canvas.height;
-        this.size = Math.random() * 3 + 1;
-        this.speedX = Math.random() * 1 - 0.5;
-        this.speedY = Math.random() * 1 - 0.5;
-      }
-      update(){
-        this.x += this.speedX;
-        this.y += this.speedY;
-        if(this.x < 0 || this.x > canvas.width) this.speedX *= -1;
-        if(this.y < 0 || this.y > canvas.height) this.speedY *= -1;
-      }
-      draw(){
-        ctx.fillStyle = 'rgba(255,255,255,0.7)';
-        ctx.beginPath();
-        ctx.arc(this.x, this.y, this.size, 0, Math.PI * 2);
-        ctx.fill();
-      }
-    }
-
-    function init(){
-      particlesArray = [];
-      for(let i=0; i<100; i++){
-        particlesArray.push(new Particle());
-      }
-    }
-
-    function animate(){
-      ctx.clearRect(0,0,canvas.width,canvas.height);
-      particlesArray.forEach(particle => {
-        particle.update();
-        particle.draw();
-      });
-      requestAnimationFrame(animate);
-    }
-
-    init();
-    animate();
-
-    window.addEventListener('resize', function(){
-      canvas.width = window.innerWidth;
-      canvas.height = window.innerHeight;
-      init();
-    });
-  </script>
 </body>
 </html>
